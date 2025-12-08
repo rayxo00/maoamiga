@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Publicações — Mão Amiga</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body onload="carregarPublicacoes()">
+
+<header>
+    <h1>Publicações Recentes</h1>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="login.html" onclick="logout()">Sair</a>
+</nav>
+
+<div class="container">
+    <h2>Nova Publicação📌</h2>
+
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" placeholder="Digite o título">
+
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" placeholder="Digite a descrição"></textarea>
+
+    <button onclick="publicar()">Publicar</button>
+
+    <h2>Publicações</h2>
+    <ul id="listaPublicacoes"></ul>
+</div>
+
+</body>
+</html>

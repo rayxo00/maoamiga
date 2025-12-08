@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil — Mão Amiga</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body onload="carregarPerfil()">
+
+<header>
+    <h1>Perfil do Usuário</h1>
+</header>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="publicacoes.html">Publicações</a>
+    <a href="login.html" onclick="logout()">Sair</a>
+</nav>
+
+<div class="container">
+    <h2>Seus dados</h2>
+
+    <img id="fotoPerfil" src="perfil.png" alt="Foto do perfil" style="width:120px; border-radius:50%;">
+
+    <p><strong>Nome:</strong> <span id="nomePerfil"></span></p>
+    <p><strong>E-mail:</strong> <span id="emailPerfil"></span></p>
+    <p><strong>Tipo de Perfil:</strong> <span id="tipoPerfil"></span></p>
+</div>
+
+</body>
+</html>
