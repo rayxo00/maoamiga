@@ -1,39 +1,126 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Emprego — Mão Amiga</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre — Mão Amiga</title>
+  <style>
+    :root{
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --accent:#2b8aee;
+      --muted:#6b7280;
+      --success:#16a34a;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#f3f6fb 0%,var(--bg) 100%);color:#030405;}
+    .wrap{max-width:980px;margin:36px auto;padding:28px;}
+    header{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#5cc1ff);
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:0 6px 18px rgba(43,138,238,.15);
+    }
+    h1{font-size:28px;margin:0}
+    p.lead{color:var(--muted);margin-top:6px;margin-bottom:18px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,.06)}
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .feature{background:#f8fafc;padding:10px;border-radius:10px;border:1px solid #eef2f7;color:#0f172a;font-size:14px}
+    ul.clean{padding-left:18px;color:var(--muted);margin:8px 0 0}
+    .cta{display:flex;gap:10px;margin-top:18px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-outline{background:transparent;border:1px solid #d1d5db;color:#111827}
+    .contact{font-size:14px;color:var(--muted);line-height:1.6}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.features{grid-template-columns:1fr}}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#f1f9ff;border:1px solid #e6f2ff;color:#044ea2;font-weight:600}
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;color:var(--muted)}
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="logo">MA</div>
+      <div>
+        <h1>Mão Amiga — Conectando quem precisa com quem pode ajudar</h1>
+        <p class="lead">Uma plataforma simples e solidária que facilita a troca de ajuda local: doações, serviços e suporte comunitário — tudo de maneira segura e fácil.</p>
+      </div>
+    </header>
 
-<header>
-    <h1>Ajuda com Emprego</h1>
-</header>
+    <div class="grid">
+      <main class="card" role="main" aria-labelledby="objetivo-title">
+        <h2 id="objetivo-title">Objetivo</h2>
+        <p>O objetivo do Mão Amiga é <strong>facilitar a conexão entre pessoas em situação de vulnerabilidade e doadores voluntários</strong>, oferecendo um ambiente simples e seguro para solicitações de ajuda, publicações de necessidades e coordenação de doações locais.</p>
 
-<nav>
-    <a href="index.html">Início</a>
-    <a href="categorias.html">Categorias</a>
-    <a href="locais.html">Locais</a>
-    <a href="publicacoes.html">Publicações</a>
-    <a href="perfil.html">Perfil</a>
-</nav>
+        <section style="margin-top:16px;">
+          <h3>Missão, Visão e Valores</h3>
+          <ul class="clean">
+            <li><strong>Missão:</strong> Promover solidariedade e reduzir a vulnerabilidade por meio de ações comunitárias.</li>
+            <li><strong>Visão:</strong> Ser referência em trocas de apoio local, com foco em transparência e empatia.</li>
+            <li><strong>Valores:</strong> Respeito, privacidade, confiança e colaboração.</li>
+          </ul>
+        </section>
 
-<div class="container">
-    <h2>Oportunidades e Capacitação</h2>
+        <section style="margin-top:16px;">
+          <h3>Funcionalidades Principais</h3>
+          <div class="features" aria-hidden="false">
+            <div class="feature">Cadastro de usuários e doadores</div>
+            <div class="feature">Publicações de necessidades e ofertas</div>
+            <div class="feature">Perfil do usuário com histórico</div>
+            <div class="feature">Lista pública de doadores (visível localmente)</div>
+          </div>
 
-    <img src="img/emprego.jpg" alt="Ajuda com emprego">
+          <p style="margin-top:12px;color:var(--muted)">Observação: na versão atual os dados são salvos no navegador (LocalStorage). Em futuras versões podemos integrar com servidor para sincronização entre dispositivos.</p>
+        </section>
 
-    <p>Oferecemos apoio para quem busca trabalho, cursos gratuitos e conexões com empresas parceiras.</p>
+        <section style="margin-top:16px;">
+          <h3>Como funciona</h3>
+          <ol class="clean" style="list-style:decimal">
+            <li>Cadastre-se como <em>Usuário</em> ou <em>Doador</em>.</li>
+            <li>Publique solicitações (título + descrição) ou ofertas de ajuda.</li>
+            <li>Doadores aparecem na lista e podem ser contatados através das informações compartilhadas.</li>
+            <li>Gerencie suas publicações e perfil em sua conta.</li>
+          </ol>
+        </section>
 
-    <ul>
-        <li>Curso de capacitação profissional</li>
-        <li>Vagas de emprego em parceria com empresas locais</li>
-        <li>Apoio para criação de currículo</li>
-    </ul>
+        <div class="meta">
+          <span class="pill">Segurança: Dados locais</span>
+          <span class="pill">Foco: Comunidade</span>
+        </div>
+      </main>
 
-    <button onclick="window.location.href='publicacoes.html'">Solicitar Ajuda</button>
-</div>
+      <aside class="card" aria-labelledby="contato-title">
+        <h2 id="contato-title">Contato & Ação</h2>
 
+        <p class="contact"><strong>E-mail (teste):</strong><br>contato.maoamiga@gmail.com</p>
+        <p class="contact"><strong>Telefone (teste):</strong><br>(81) 98888-7777</p>
+
+        <div class="cta" role="group" aria-label="Ações">
+          <button class="btn btn-primary" onclick="location.href='cadastro.html'">Cadastrar</button>
+          <button class="btn btn-outline" onclick="location.href='login.html'">Entrar</button>
+        </div>
+
+        <section style="margin-top:14px;">
+          <h4>Benefícios para doadores</h4>
+          <ul class="clean">
+            <li>Visibilidade local</li>
+            <li>Controle sobre ofertas</li>
+            <li>Impacto direto na comunidade</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:14px;">
+          <h4>FAQ rápido</h4>
+          <p style="margin:6px 0;color:var(--muted)">Os dados ficam apenas no seu navegador. Para usar em outro aparelho, exporte-os ou aguarde versão com servidor.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <p>© <strong>Mão Amiga</strong> — Plataforma comunitária de apoio.</p>
+    </footer>
+  </div>
 </body>
 </html>
